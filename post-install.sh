@@ -92,9 +92,6 @@ if [[ $htb =~ ^([yY][eE][sS]|[yY])$ ]]; then
     bash ./htb-addition.sh
 fi
 
-# Changing Prompt Alternative from 'twoline' to 'oneline'
-sed -i "" ~/.bashrc 
-
 # Copying ~/.zshrc to user_list's users
 for user in $user_list; do
     if [[ $user != 'root' ]]; then
