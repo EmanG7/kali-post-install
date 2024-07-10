@@ -1,0 +1,15 @@
+# START CUSTOM: HTB
+function getip(){ 
+    tunnel_ip=`ifconfig tun0 2>/dev/null | grep netmask | awk '{print $2}'` 
+    default_ip=`ifconfig eth0 2>/dev/null | grep netmask | awk '{print $2}'` 
+    if [[ $tunnel_ip == *"10."* ]]; then 
+        echo $tunnel_ip 
+    else 
+        echo $default_ip 
+    fi 
+} 
+
+alias htbon='openvpn ~/ovpnconfig/htb-lab.ovpn 1>/dev/null &' 
+alias kvpn='pkill openvpn' 
+
+# END CUSTOM: HTB

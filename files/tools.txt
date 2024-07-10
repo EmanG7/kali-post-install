@@ -1,0 +1,6 @@
+# START CUSTOM: TOOLS
+function mknote(){
+    mkdir enu loot file exploits
+}
+alias tools='python3 -m http.server -d ~/tools 80'
+# END CUSTOM: TOOLS
